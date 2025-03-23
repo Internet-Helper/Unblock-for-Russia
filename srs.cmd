@@ -1,0 +1,1 @@
+sing-box rule-set compile geoblock.json
