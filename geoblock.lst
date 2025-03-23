@@ -72,6 +72,11 @@ alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
 generativelanguage.googleapis.com
 
+api.x.com
+grok.com
+grok.x.com
+x.ai
+
 akamaized.net
 byspotify.com
 pscdn.co
@@ -140,7 +145,6 @@ annimon.com
 anthropic.com
 anythingllm.com
 api.themoviedb.org
-api.x.com
 apiary.io
 aplawrence.com
 apple.com
@@ -313,8 +317,6 @@ grafana.com
 grammarly.com
 graylog.org
 grazie.ai
-grok.com
-grok.x.com
 groq.com
 groupon.com
 grouponcdn.com
@@ -666,7 +668,6 @@ wonderclub.com
 wpengine.com
 wunderground.com
 www3.corsair.com
-x.ai
 xbox.com
 xerox.com
 xfantazy.com
