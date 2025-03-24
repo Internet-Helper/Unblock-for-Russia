@@ -41,95 +41,64 @@ def process_geoblock_file(filename, urls, temp_filenames, is_custom=False):
     if is_custom:  # Для custom-geoblock.lst обрабатываем только первую ссылку
         main_url = urls[0]  # Берем только первую ссылку для custom
         other_urls = []     # И не добавляем другие
-
     else:
         main_url = urls[0]  # Первая ссылка - для geoblock
-        other_urls = urls[1:] # Остальные ссылки
+        other_urls = urls[1:]  # Остальные ссылки
 
     # 1. Загрузка из основной ссылки (main_url)
     main_url_lines = fetch_url_content(main_url)
     if main_url_lines is False:  # Если пользователь прервал выполнение
         return False
-
     if main_url_lines is None:
         print(f"Не удалось загрузить основной список доменов из {main_url}, продолжение невозможно")
         return False
 
-    # Разделение контента на блоки (если применимо)
-    content = "\n".join(main_url_lines) # Преобразование списка строк обратно в строку
-    blocks = content.split('\n\n') if filename == 'geoblock.lst' else [content]  #  Разбиваем на блоки только если geoblock, если custom, тогда не надо
-
-    initial_lines = []
-    for block in blocks:
-        lines = [line.strip() for line in block.splitlines() if line.strip() and not line.startswith('#')]
-        initial_lines.extend(lines)
-    initial_domains = extract_unique_domains(initial_lines) - domains_for_delete
+    # Разделение контента на блоки
+    content = "\n".join(main_url_lines)
+    blocks = content.split('\n\n')
 
     processed_blocks = []
+    initial_domains = set() # Initialize the variable
+
     for block in blocks:
         lines = [line.strip() for line in block.splitlines() if line.strip() and not line.startswith('#')]
-        if not lines:
-            continue
-
-        seen = set()
-        filtered_lines = []
-        for line in lines:
-            domains = [domain.strip() for domain in line.split() if domain.strip() and domain != '#']
-            for domain in domains:
-                if domain not in seen and domain not in domains_for_delete:
-                    filtered_lines.append(domain)
-                    seen.add(domain)
-
-        processed_blocks.append(filtered_lines)
-
-    all_local_domains = set()
-    for block in processed_blocks:
-        all_local_domains.update(block)
-
-    url_stats = []
-    seen_domains = set(all_local_domains)
-    added_domains_lists = {}
+        if lines:
+            # Extract unique domains and update initial_domains
+            unique_domains_in_block = extract_unique_domains(lines) - domains_for_delete
+            initial_domains.update(unique_domains_in_block)
+            processed_blocks.append(list(unique_domains_in_block))  # Append list of unique domains
+        else:
+            processed_blocks.append([]) # Keep the empty block
 
     # 2. Обработка дополнительных ссылок (только для geoblock)
     if not is_custom:
-        for index, url in enumerate(other_urls, start=2): # Отсчет с 2, т.к. первая ссылка уже обработана
+        for index, url in enumerate(other_urls, start=2):  # Отсчет с 2, т.к. первая ссылка уже обработана
             url_lines = fetch_url_content(url)
-
             if url_lines is False:  # Если пользователь прервал выполнение
                 return False
-
             if url_lines is None:
                 continue
 
             cleaned_lines = [line.strip() for line in url_lines if line.strip() and not line.strip().startswith('#')]
-            total_url_domains = len(extract_unique_domains(cleaned_lines))
+            new_domains = extract_unique_domains(cleaned_lines) - domains_for_delete
 
-            url_domains = extract_unique_domains(cleaned_lines)
-            new_domains = [domain for domain in url_domains if domain not in seen_domains and domain not in domains_for_delete]
-            new_domains_count = len(new_domains)
+            # Add new domains into the last block
+            if processed_blocks:
+                last_block = processed_blocks[-1]
+                for domain in new_domains:
+                    if domain not in initial_domains:
+                        last_block.append(domain)
+                        initial_domains.add(domain)
+            else:
+                processed_blocks.append(list(new_domains))  # Create the first block when there's none
 
-            added_domains_lists[f"added_domains_{index}"] = new_domains
-
-            if new_domains:
-                processed_blocks[-1].extend(new_domains)
-                processed_blocks[-1].sort()
-                seen_domains.update(new_domains)
-
-            url_stats.append((url, total_url_domains, new_domains_count))
-
-    # 3. Формирование итогового списка
+    # 3. Формирование итогового списка с сохранением блоков
     result = []
-    seen_domains = set()
-    for i, block in enumerate(processed_blocks):
-        block_result = []
-        for domain in block:
-            if domain not in seen_domains:
-                block_result.append(domain)
-                seen_domains.add(domain)
-        if block_result:
-            result.extend(block_result)
-            if i < len(processed_blocks) - 1:
-                result.append('')
+    for block in processed_blocks:
+        sorted_block = sorted(block)  # Сортировка доменов в каждом блоке
+        result.extend(sorted_block)
+        if processed_blocks.index(block) < len(processed_blocks) - 1:
+            result.append('')  # Добавляем пустую строку между блоками
 
     final_domains = set(result) - {''}
 
@@ -159,7 +128,7 @@ def process_geoblock_file(filename, urls, temp_filenames, is_custom=False):
     print(f"Было в {filename}: {len(initial_domains)} доменов.")
     print(f"Стало в {filename}: {len(final_domains)} доменов.\n")
 
-    return True # Возвращаем True в случае успеха
+    return True  # Возвращаем True в случае успеха
 
 def run_srs_cmd(geoblock_json_path, srs_path):  # Изменен параметр для srs.
     """

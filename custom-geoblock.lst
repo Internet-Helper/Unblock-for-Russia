@@ -7,15 +7,15 @@ canva-apps.com
 canva.com
 canva.dev
 
-chatgpt.com
-openai.com
-oaistatic.com
-oaiusercontent.com
-chat.com
 ai.com
+chat.com
 chat.openai.com.cdn.cloudflare.net
+chatgpt.com
 gpt3-openai.com
 live.net
+oaistatic.com
+oaiusercontent.com
+openai.com
 openai.fund
 openai.org
 sora.com
@@ -31,6 +31,8 @@ microsoft.com
 microsoftapp.net
 windowsupdate.com
 
+adobe-identity.com
+adobe-services.com
 adobe.com
 adobe.io
 adobecc.com
@@ -40,38 +42,36 @@ adobedtm.com
 adobeexchange.com
 adobegenuine.com
 adobegov.com
-adobe-identity.com
 adobejanus.com
 adobelogin.com
 adobeoobe.com
 adobeprojectm.com
 adobesc.com
-adobe-services.com
 adobess.com
 adobesunbreak.com
 adobetag.com
+amazonaws.com
+arkoselabs.com
+astockcdn.net
 behance.net
+cloudfront.net
+crashlytics.com
 ftcdn.net
 typekit.com
 typekit.net
-astockcdn.net
-amazonaws.com
-cloudfront.net
-crashlytics.com
-arkoselabs.com
 
-bard.google.com
-gemini.google.com
 aistudio.google.com
-lookerstudio.google.com
-notebooklm.google.com
-news.google.com
-gstatic.com
-suggestqueries.google.com
-proactivebackend-pa.googleapis.com
 alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
+bard.google.com
+gemini.google.com
 generativelanguage.googleapis.com
+gstatic.com
+lookerstudio.google.com
+news.google.com
+notebooklm.google.com
+proactivebackend-pa.googleapis.com
+suggestqueries.google.com
 
 api.x.com
 grok.com
@@ -119,13 +119,13 @@ nflxso.net
 nflxvideo.net
 onetrust.com
 
+api.themoviedb.org
+image.tmdb.org
 theaudiodb.com
 themoviedb.org
-tmdb.org
-tmdb.com
-image.tmdb.org
-api.themoviedb.org
 tmdb-image-prod.b-cdn.net
+tmdb.com
+tmdb.org
 
 autodesk.com
 cdn.web-platform.io
@@ -133,11 +133,11 @@ cdn.web-platform.io
 anthropic.com
 claude.ai
 claudeusercontent.com
+elevenlabs.io
+hellonotion.com
 intercom.io
 intercomassets.com
 intercomcdn.com
-elevenlabs.io
-hellonotion.com
 notion-media.com
 notion-static.com
 notion.ai
@@ -147,7 +147,7 @@ notion.site
 notion.so
 notionup.com
 notionusercontent.com
-splunkcloud.com
-zendesk.com
 sketchup.com
+splunkcloud.com
 weather.com
+zendesk.com
