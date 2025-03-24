@@ -4,20 +4,20 @@
 
 Вы можете выбрать один из двух списков, в зависимости от ваших потребностей:
 
-## 1. `custom-geoblock`
-
-*   Обрезанная версия `geoblock`. Содержит только те домены, которыми я пользуюсь лично или планирую пользоваться.
-
-## 2. `geoblock`
+## 1. `geoblock`
 
 *   Этот список доменов составляется из трех источников:
     *   [`custom-geoblock` от Internet-Helper](https://github.com/Internet-Helper/Unblock-for-Russia/blob/main/custom-geoblock.lst) (тот же, что и в пункте 1)
     *   [`no-russia-hosts` от dartraiden](https://github.com/dartraiden/no-russia-hosts/blob/master/hosts.txt)
     *   [`geoblock.lst` от itdoginfo](https://github.com/itdoginfo/allow-domains/blob/main/Categories/geoblock.lst)
 
+## 2. `custom-geoblock`
+
+*   Обрезанная версия `geoblock`. Содержит только те домены, которыми я пользуюсь лично или планирую пользоваться.
+
 ***
 
-Для каждого из двух списков (`custom-geoblock` и `geoblock`) доступны четыре формата файлов:
+Для каждого из двух списков (`geoblock` и `custom-geoblock`) доступны четыре формата файлов:
 
 *   `.lst`: Используется как источник доменов для обновления остальных файлов.
 *   `.srs`: Скомпилированный формат, предназначенный для использования с [sing-box](https://github.com/SagerNet/sing-box), содержащий список доменов.
