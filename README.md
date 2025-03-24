@@ -51,7 +51,7 @@ geoblock_urls = [
     'https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Categories/geoblock.lst'
 ]
 ```
-Чтобы скрипт не создавал файлы со списком `custom_geoblock`, то удалите этот раздел в том же файле `update.py`:
+Чтобы скрипт дополнительно не создавал файлы со списком `custom_geoblock`, то удалите этот раздел в том же файле `update.py`:
 ```
 # Использование ссылки для custom_geoblock_urls
 custom_geoblock_urls = [
