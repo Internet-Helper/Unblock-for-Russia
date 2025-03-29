@@ -7,7 +7,7 @@
 ## 1. `geoblock`
 
 *   Этот список доменов составляется из трех источников:
-    *   [`custom-geoblock` от Internet-Helper](https://github.com/Internet-Helper/Unblock-for-Russia/blob/main/custom-geoblock.lst) (тот же, что и в пункте 1)
+    *   [`custom-geoblock` от Internet-Helper](https://github.com/Internet-Helper/Unblock-for-Russia/blob/main/custom-geoblock.lst) (тот же, что ниже в пункте 2)
     *   [`no-russia-hosts` от dartraiden](https://github.com/dartraiden/no-russia-hosts/blob/master/hosts.txt)
     *   [`geoblock.lst` от itdoginfo](https://github.com/itdoginfo/allow-domains/blob/main/Categories/geoblock.lst)
 
