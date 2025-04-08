@@ -69,6 +69,7 @@ intercomassets.com
 intercomcdn.com
 live.net
 lookerstudio.google.com
+meta.ai
 microsoft.com
 microsoftapp.net
 netflix.ca

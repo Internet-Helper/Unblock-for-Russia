@@ -7,6 +7,9 @@ import shutil
 import time
 import sys
 
+# Добавление комментария что #Работает только через американские IP
+ADD_USA_COMMENT = '+' # + для включения, - для выключения
+
 # Использование ссылок для geoblock_urls
 geoblock_urls = [
     'https://raw.githubusercontent.com/Internet-Helper/Unblock-for-Russia/refs/heads/main/geoblock.lst',
@@ -57,11 +60,11 @@ def extract_unique_domains(text_lines):
     unique_domains = set()
     for line in text_lines:
         cleaned_line = ''.join(char for char in line if char.isprintable())
-        domains = [domain.strip() for domain in line.split() if domain.strip() and domain != '#']
+        domains = [domain.strip() for domain in line.split() if domain.strip() and not domain.startswith('#')]
         unique_domains.update(domains)
     return unique_domains
 
-def process_geoblock_file(filename, urls, temp_filenames, is_custom=False):
+def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_custom=False):
     print(f"Запуск работы с {filename}...\n")
     
     if is_custom:
@@ -74,18 +77,19 @@ def process_geoblock_file(filename, urls, temp_filenames, is_custom=False):
     main_url_lines = fetch_url_content(main_url, is_main=True)
     if main_url_lines is False:
         return False
-    if main_url_lines is None and not is_custom:  # Только для geoblock основной список обязателен
+    if main_url_lines is None and not is_custom:
         print(f"Не удалось загрузить основной список доменов из {main_url}, продолжение невозможно")
         return False
-    elif main_url_lines is None and is_custom:  # Для custom просто пропускаем
+    elif main_url_lines is None and is_custom:
         print(f"Пропускаем обработку {filename} из-за неудачной загрузки.")
-        return True  # Продолжаем, но без обработки custom
+        return True
 
     content = "\n".join(main_url_lines)
     blocks = content.split('\n\n')
 
     processed_blocks = []
     initial_domains = set()
+    first_block_custom = set()  # Для хранения доменов первой подгруппы из custom
 
     for block in blocks:
         lines = [line.strip() for line in block.splitlines() if line.strip() and not line.startswith('#')]
@@ -96,8 +100,26 @@ def process_geoblock_file(filename, urls, temp_filenames, is_custom=False):
         else:
             processed_blocks.append([])
 
+    if not is_custom and custom_urls:
+        custom_lines = fetch_url_content(custom_urls[0])
+        if custom_lines is False:
+            return False
+        if custom_lines is not None:
+            custom_content = "\n".join(custom_lines)
+            custom_blocks = custom_content.split('\n\n')
+            custom_domains_by_block = []
+            for i, block in enumerate(custom_blocks):
+                lines = [line.strip() for line in block.splitlines() if line.strip() and not line.startswith('#')]
+                if lines:
+                    unique_domains = extract_unique_domains(lines) - domains_for_delete
+                    custom_domains_by_block.append(unique_domains)
+                    if i == 0:
+                        first_block_custom = unique_domains  # Сохраняем первую подгруппу
+                else:
+                    custom_domains_by_block.append(set())
+
     if not is_custom:
-        for index, url in enumerate(other_urls, start=2):
+        for url in other_urls:
             url_lines = fetch_url_content(url)
             if url_lines is False:
                 return False
@@ -116,17 +138,42 @@ def process_geoblock_file(filename, urls, temp_filenames, is_custom=False):
             else:
                 processed_blocks.append(list(new_domains))
 
+    # Формирование результата для .lst файла
     result = []
+    final_domains = set()
+
+    # Обработка первой подгруппы из custom
+    if not is_custom and first_block_custom:
+        result.extend(sorted(first_block_custom))  # Первая подгруппа только из custom
+        final_domains.update(first_block_custom)
+        if processed_blocks or (custom_urls and len(custom_domains_by_block) > 1):
+            result.append('')
+
+    # Объединение последней подгруппы из custom с последней подгруппой geoblock
+    if not is_custom and custom_urls and len(custom_domains_by_block) > 0:
+        last_custom_block = custom_domains_by_block[-1]
+        if processed_blocks:
+            last_block = processed_blocks[-1]
+            for domain in last_custom_block:
+                if domain not in initial_domains:
+                    last_block.append(domain)
+                    initial_domains.add(domain)
+        else:
+            processed_blocks = [list(last_custom_block)]
+
+    # Добавление блоков в результат
     for block in processed_blocks:
         sorted_block = sorted(block)
         result.extend(sorted_block)
+        final_domains.update(sorted_block)
         if processed_blocks.index(block) < len(processed_blocks) - 1:
             result.append('')
 
-    final_domains = set(result) - {''}
-
+    # Добавление комментария в .lst файлы, если включено
     temp_lst_filename = temp_filenames['geoblock_lst'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_lst']
     with open(temp_lst_filename, 'w', encoding='utf-8') as f:
+        if ADD_USA_COMMENT == '+':
+            f.write('#Работает только через американские IP\n')
         f.write('\n'.join(result))
 
     temp_json_filename = temp_filenames['geoblock_json'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_json']
@@ -140,6 +187,12 @@ def process_geoblock_file(filename, urls, temp_filenames, is_custom=False):
     temp_txt_filename = temp_filenames['geoblock_txt'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_txt']
     with open(temp_txt_filename, 'w', encoding='utf-8') as txt_file:
         txt_file.write("\n".join(sorted(final_domains)))
+
+    # Создание файлов для AGH
+    temp_agh_filename = temp_filenames['geoblock_agh'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_agh']
+    with open(temp_agh_filename, 'w', encoding='utf-8') as agh_file:
+        domains_str = "/" + "/".join(sorted(final_domains)) + "/"
+        agh_file.write(f"[{domains_str}]https://router.comss.one/dns-query https://dns.comss.one/dns-query tls://dns.comss.one quic://dns.comss.one")
 
     print(f"Было в {filename}: {len(initial_domains)} доменов.")
     print(f"Стало в {filename}: {len(final_domains)} доменов.\n")
@@ -177,14 +230,16 @@ def create_temp_filenames(has_custom):
         'geoblock_lst': tempfile.mktemp(suffix=".lst", prefix="geoblock_temp_"),
         'geoblock_json': tempfile.mktemp(suffix=".json", prefix="geoblock_temp_"),
         'geoblock_txt': tempfile.mktemp(suffix=".txt", prefix="geoblock_temp_"),
-        'geoblock_srs': tempfile.mktemp(suffix=".srs", prefix="geoblock_temp_")
+        'geoblock_srs': tempfile.mktemp(suffix=".srs", prefix="geoblock_temp_"),
+        'geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="geoblock-for-AGH_temp_")
     }
     if has_custom:
         filenames.update({
             'custom_geoblock_lst': tempfile.mktemp(suffix=".lst", prefix="custom_geoblock_temp_"),
             'custom_geoblock_json': tempfile.mktemp(suffix=".json", prefix="custom_geoblock_temp_"),
             'custom_geoblock_txt': tempfile.mktemp(suffix=".txt", prefix="custom_geoblock_temp_"),
-            'custom_geoblock_srs': tempfile.mktemp(suffix=".srs", prefix="custom_geoblock_temp_")
+            'custom_geoblock_srs': tempfile.mktemp(suffix=".srs", prefix="custom_geoblock_temp_"),
+            'custom_geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="custom-geoblock-for-AGH_temp_")
         })
     return filenames
 
@@ -210,12 +265,14 @@ def replace_original_with_temp(temp_filenames, create_srs, has_custom):
         shutil.copy2(temp_filenames['geoblock_lst'], GEOBLOCK_LST)
         shutil.copy2(temp_filenames['geoblock_json'], 'geoblock.json')
         shutil.copy2(temp_filenames['geoblock_txt'], 'geoblock.txt')
+        shutil.copy2(temp_filenames['geoblock_agh'], 'geoblock-for-AGH.txt')
         if create_srs:
             shutil.copy2(temp_filenames['geoblock_srs'], 'geoblock.srs')
         if has_custom:
             shutil.copy2(temp_filenames['custom_geoblock_lst'], CUSTOM_GEOBLOCK_LST)
             shutil.copy2(temp_filenames['custom_geoblock_json'], 'custom-geoblock.json')
             shutil.copy2(temp_filenames['custom_geoblock_txt'], 'custom-geoblock.txt')
+            shutil.copy2(temp_filenames['custom_geoblock_agh'], 'custom-geoblock-for-AGH.txt')
             if create_srs:
                 shutil.copy2(temp_filenames['custom_geoblock_srs'], 'custom-geoblock.srs')
         print("Замена завершена.")
@@ -233,7 +290,7 @@ def countdown_and_exit(duration=3):
     sys.exit(0)
 
 def update_files(geoblock_urls, custom_geoblock_urls, temp_filenames, create_srs, has_custom):
-    geoblock_success = process_geoblock_file(GEOBLOCK_LST, geoblock_urls, temp_filenames)
+    geoblock_success = process_geoblock_file(GEOBLOCK_LST, geoblock_urls, temp_filenames, custom_urls=custom_geoblock_urls)
     if not geoblock_success:
         return False
 
