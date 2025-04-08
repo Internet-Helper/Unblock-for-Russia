@@ -43,7 +43,7 @@
 *   Для работы скрипта требуется установленный [`Python 3`](https://www.python.org/downloads/) и библиотека `requests`.
 *   Для компиляции `.srs` файлов требуется исполняемый файл [`sing-box`](https://github.com/SagerNet/sing-box/releases) в той же папке, где запускается `update.py`. В ином случае будут созданы только три формата без `.srs`.
 
-Чтобы создать свой список доменов, просто замените на свои ссылки в переменной `geoblock_urls` в файле `update.py`:
+Чтобы создать свой список доменов, замените на свои ссылки в переменной `geoblock_urls` в файле `update.py`:
 ```
 # Использование ссылок для geoblock_urls
 geoblock_urls = [
@@ -51,6 +51,10 @@ geoblock_urls = [
     'https://raw.githubusercontent.com/dartraiden/no-russia-hosts/refs/heads/master/hosts.txt',
     'https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Categories/geoblock.lst'
 ]
+```
+И замените + на - в строке:
+```
+ADD_USA_COMMENT = '+' # + для включения, - для выключения
 ```
 Чтобы скрипт дополнительно не создавал файлы со списком `custom_geoblock`, то удалите этот раздел в том же файле `update.py`:
 ```
