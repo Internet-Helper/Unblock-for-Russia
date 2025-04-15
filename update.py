@@ -7,7 +7,10 @@ import shutil
 import time
 import sys
 
-# Добавление комментария что #Работает только через американские IP
+# Устанавливаем текущую рабочую директорию как папку со скриптом
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
+# Добавление комментария - # Работает только через американские IP
 ADD_USA_COMMENT = '+' # + для включения, - для выключения
 
 # Использование ссылок для geoblock_urls
@@ -89,7 +92,6 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
 
     processed_blocks = []
     initial_domains = set()
-    first_block_custom = set()  # Для хранения доменов первой подгруппы из custom
 
     for block in blocks:
         lines = [line.strip() for line in block.splitlines() if line.strip() and not line.startswith('#')]
@@ -100,6 +102,9 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
         else:
             processed_blocks.append([])
 
+    custom_blocks_to_replace = []  # Для хранения всех подгрупп из custom, кроме последней
+    custom_domains_by_block = []
+
     if not is_custom and custom_urls:
         custom_lines = fetch_url_content(custom_urls[0])
         if custom_lines is False:
@@ -107,16 +112,17 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
         if custom_lines is not None:
             custom_content = "\n".join(custom_lines)
             custom_blocks = custom_content.split('\n\n')
-            custom_domains_by_block = []
             for i, block in enumerate(custom_blocks):
                 lines = [line.strip() for line in block.splitlines() if line.strip() and not line.startswith('#')]
                 if lines:
                     unique_domains = extract_unique_domains(lines) - domains_for_delete
                     custom_domains_by_block.append(unique_domains)
-                    if i == 0:
-                        first_block_custom = unique_domains  # Сохраняем первую подгруппу
+                    if i < len(custom_blocks) - 1:  # Сохраняем все, кроме последней подгруппы
+                        custom_blocks_to_replace.append(unique_domains)
                 else:
                     custom_domains_by_block.append(set())
+                    if i < len(custom_blocks) - 1:
+                        custom_blocks_to_replace.append(set())
 
     if not is_custom:
         for url in other_urls:
@@ -142,12 +148,17 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
     result = []
     final_domains = set()
 
-    # Обработка первой подгруппы из custom
-    if not is_custom and first_block_custom:
-        result.extend(sorted(first_block_custom))  # Первая подгруппа только из custom
-        final_domains.update(first_block_custom)
-        if processed_blocks or (custom_urls and len(custom_domains_by_block) > 1):
-            result.append('')
+    # Замена всех подгрупп до последней из custom для geoblock.lst
+    if not is_custom and custom_blocks_to_replace:
+        for custom_block in custom_blocks_to_replace:
+            result.extend(sorted(custom_block))
+            final_domains.update(custom_block)
+            result.append('')  # Добавляем пустую строку после каждой подгруппы
+        # Сохраняем только последнюю подгруппу из processed_blocks
+        if processed_blocks:
+            processed_blocks = [processed_blocks[-1]]  # Оставляем только последнюю подгруппу
+        else:
+            processed_blocks = []
 
     # Объединение последней подгруппы из custom с последней подгруппой geoblock
     if not is_custom and custom_urls and len(custom_domains_by_block) > 0:
@@ -159,7 +170,7 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
                     last_block.append(domain)
                     initial_domains.add(domain)
         else:
-            processed_blocks = [list(last_custom_block)]
+            processed_blocks.append(list(last_custom_block))
 
     # Добавление блоков в результат
     for block in processed_blocks:
@@ -192,7 +203,7 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
     temp_agh_filename = temp_filenames['geoblock_agh'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_agh']
     with open(temp_agh_filename, 'w', encoding='utf-8') as agh_file:
         domains_str = "/" + "/".join(sorted(final_domains)) + "/"
-        agh_file.write(f"[{domains_str}]https://router.comss.one/dns-query https://dns.comss.one/dns-query tls://dns.comss.one quic://dns.comss.one")
+        agh_file.write(f"[{domains_str}]")
 
     print(f"Было в {filename}: {len(initial_domains)} доменов.")
     print(f"Стало в {filename}: {len(final_domains)} доменов.\n")
@@ -239,7 +250,7 @@ def create_temp_filenames(has_custom):
             'custom_geoblock_json': tempfile.mktemp(suffix=".json", prefix="custom_geoblock_temp_"),
             'custom_geoblock_txt': tempfile.mktemp(suffix=".txt", prefix="custom_geoblock_temp_"),
             'custom_geoblock_srs': tempfile.mktemp(suffix=".srs", prefix="custom_geoblock_temp_"),
-            'custom_geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="custom-geoblock-for-AGH_temp_")
+            'custom_geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="custom_geoblock-for-AGH_temp_")
         })
     return filenames
 

@@ -68,6 +68,7 @@ intercom.io
 intercomassets.com
 intercomcdn.com
 live.net
+livekit.cloud
 lookerstudio.google.com
 meta.ai
 microsoft.com
