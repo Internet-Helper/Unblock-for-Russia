@@ -139,6 +139,7 @@ tmdb.org
 typekit.com
 typekit.net
 weather.com
+webchannel-alkalimakersuite-pa.clients6.google.com
 windowsupdate.com
 x.ai
 zendesk.com
