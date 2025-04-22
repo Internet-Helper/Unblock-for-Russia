@@ -182,6 +182,7 @@ dyson.com
 dyson.nl
 dyson.se
 e-hentai.org
+easyjet.com
 elastic.co
 element14.com
 elevenlabs.io
@@ -297,10 +298,12 @@ intel.nl
 intel.se
 intelix.sophos.com
 intellij.net
+intellipaat.com
 intercom.io
 intercomassets.com
 intercomcdn.com
 intuitibits.com
+iperf3serverlist.net
 itninja.com
 jabra.com
 jamf.com
@@ -342,12 +345,14 @@ macpaw.com
 macvendors.com
 malwarebytes.com
 malwarebytes.org
+maps.googleapis.com
 matrix.org
 mattermost.com
 maximintegrated.com
 mbamupdates.com
 mbed.com
 medicalnewstoday.com
+meest-shop.com
 megogo.net
 meraki.com
 meshcapade.com
@@ -360,6 +365,7 @@ microchip.com
 microsoft.com
 microsoftapp.net
 middlewareinventory.com
+militarnyi.com
 mixcloud.com
 moneypuck.com
 mongodb.com
@@ -586,6 +592,7 @@ supercell.com
 support.xerox.com
 surveymonkey.com
 swagger.io
+syncfusion.com
 synoforum.com
 sysdig.com
 systemtek.co.uk
