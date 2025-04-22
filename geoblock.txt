@@ -258,7 +258,6 @@ grok.x.com
 groq.com
 groupon.com
 grouponcdn.com
-gstatic.com
 guilded.gg
 habr.com
 habrastorage.org
@@ -345,7 +344,6 @@ macpaw.com
 macvendors.com
 malwarebytes.com
 malwarebytes.org
-maps.googleapis.com
 matrix.org
 mattermost.com
 maximintegrated.com
@@ -403,7 +401,6 @@ netflixstudios.com
 netflixtechblog.com
 netlify.com
 newark.com
-news.google.com
 newsroom.porsche.com
 nfl.com
 nflxext.com
@@ -460,6 +457,7 @@ parts-express.com
 pcbway.com
 pcgamesn.com
 pcmag.com
+people-pa.clients6.google.com
 perforce.com
 peter-tanner.com
 pexels.com
@@ -659,6 +657,7 @@ volkswagen-classic-parts.com
 vpnunlimited.com
 vyos.io
 w.atwiki.jp
+waa-pa.clients6.google.com
 wakanim.tv
 walletconnect.com
 walmart.com
