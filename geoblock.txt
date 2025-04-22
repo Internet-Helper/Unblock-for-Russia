@@ -54,6 +54,7 @@ anythingllm.com
 api.themoviedb.org
 api.x.com
 apiary.io
+apis.google.com
 aplawrence.com
 appcenter.ms
 apple.com
@@ -401,6 +402,7 @@ netflixstudios.com
 netflixtechblog.com
 netlify.com
 newark.com
+news.google.com
 newsroom.porsche.com
 nfl.com
 nflxext.com

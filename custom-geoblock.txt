@@ -28,6 +28,7 @@ amazonaws.com
 anthropic.com
 api.themoviedb.org
 api.x.com
+apis.google.com
 appcenter.ms
 arkoselabs.com
 astockcdn.net
