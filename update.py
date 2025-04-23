@@ -69,7 +69,7 @@ def extract_unique_domains(text_lines):
 
 def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_custom=False):
     print(f"Запуск работы с {filename}...\n")
-    
+
     if is_custom:
         main_url = urls[0]
         other_urls = []
@@ -151,7 +151,7 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
     # Замена всех подгрупп до последней из custom для geoblock.lst
     if not is_custom and custom_blocks_to_replace:
         for custom_block in custom_blocks_to_replace:
-            result.extend(sorted(custom_block))
+            result.extend(sorted(list(custom_block)))
             final_domains.update(custom_block)
             result.append('')  # Добавляем пустую строку после каждой подгруппы
         # Сохраняем только последнюю подгруппу из processed_blocks
@@ -190,20 +190,26 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
     temp_json_filename = temp_filenames['geoblock_json'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_json']
     json_data = {
         "version": 1,
-        "rules": [{"domain_suffix": sorted(final_domains)}]
+        "rules": [{"domain_suffix": sorted(list(final_domains))}]
     }
     with open(temp_json_filename, "w", encoding="utf-8") as json_file:
         json.dump(json_data, json_file, ensure_ascii=False, indent=2)
 
     temp_txt_filename = temp_filenames['geoblock_txt'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_txt']
     with open(temp_txt_filename, 'w', encoding='utf-8') as txt_file:
-        txt_file.write("\n".join(sorted(final_domains)))
+        txt_file.write("\n".join(sorted(list(final_domains))))
 
     # Создание файлов для AGH
     temp_agh_filename = temp_filenames['geoblock_agh'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_agh']
     with open(temp_agh_filename, 'w', encoding='utf-8') as agh_file:
-        domains_str = "/" + "/".join(sorted(final_domains)) + "/"
+        domains_list = sorted(list(final_domains))
+        domains_str = "/" + "/".join(domains_list) + "/"
         agh_file.write(f"[{domains_str}]")
+
+    # Создание файлов для 3X-UI
+    temp_3xui_filename = temp_filenames['geoblock_3xui'] if filename == GEOBLOCK_LST else temp_filenames['custom_geoblock_3xui']
+    with open(temp_3xui_filename, 'w', encoding='utf-8') as ui_file:
+        ui_file.write(",".join(sorted(list(final_domains))))
 
     print(f"Было в {filename}: {len(initial_domains)} доменов.")
     print(f"Стало в {filename}: {len(final_domains)} доменов.\n")
@@ -242,7 +248,8 @@ def create_temp_filenames(has_custom):
         'geoblock_json': tempfile.mktemp(suffix=".json", prefix="geoblock_temp_"),
         'geoblock_txt': tempfile.mktemp(suffix=".txt", prefix="geoblock_temp_"),
         'geoblock_srs': tempfile.mktemp(suffix=".srs", prefix="geoblock_temp_"),
-        'geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="geoblock-for-AGH_temp_")
+        'geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="geoblock-for-AGH_temp_"),
+        'geoblock_3xui': tempfile.mktemp(suffix=".txt", prefix="custom-geoblock-for-3X-UI_temp_")
     }
     if has_custom:
         filenames.update({
@@ -250,7 +257,8 @@ def create_temp_filenames(has_custom):
             'custom_geoblock_json': tempfile.mktemp(suffix=".json", prefix="custom_geoblock_temp_"),
             'custom_geoblock_txt': tempfile.mktemp(suffix=".txt", prefix="custom_geoblock_temp_"),
             'custom_geoblock_srs': tempfile.mktemp(suffix=".srs", prefix="custom_geoblock_temp_"),
-            'custom_geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="custom_geoblock-for-AGH_temp_")
+            'custom_geoblock_agh': tempfile.mktemp(suffix=".txt", prefix="custom_geoblock-for-AGH_temp_"),
+            'custom_geoblock_3xui': tempfile.mktemp(suffix=".txt", prefix="custom-geoblock-for-3X-UI_temp_")
         })
     return filenames
 
@@ -259,7 +267,7 @@ def cleanup_temp_files(temp_filenames, create_srs, has_custom):
     for temp_file in temp_filenames.values():
         if not create_srs and temp_file.endswith(".srs"):
             continue
-        if not has_custom and "custom_geoblock" in temp_file:
+        if not has_custom and ("custom_geoblock" in temp_file or "custom-geoblock-for-3X-UI" in temp_file):
             continue
         try:
             os.remove(temp_file)
@@ -277,6 +285,7 @@ def replace_original_with_temp(temp_filenames, create_srs, has_custom):
         shutil.copy2(temp_filenames['geoblock_json'], 'geoblock.json')
         shutil.copy2(temp_filenames['geoblock_txt'], 'geoblock.txt')
         shutil.copy2(temp_filenames['geoblock_agh'], 'geoblock-for-AGH.txt')
+        shutil.copy2(temp_filenames['geoblock_3xui'], 'geoblock-for-3X-UI.txt')
         if create_srs:
             shutil.copy2(temp_filenames['geoblock_srs'], 'geoblock.srs')
         if has_custom:
@@ -284,6 +293,7 @@ def replace_original_with_temp(temp_filenames, create_srs, has_custom):
             shutil.copy2(temp_filenames['custom_geoblock_json'], 'custom-geoblock.json')
             shutil.copy2(temp_filenames['custom_geoblock_txt'], 'custom-geoblock.txt')
             shutil.copy2(temp_filenames['custom_geoblock_agh'], 'custom-geoblock-for-AGH.txt')
+            shutil.copy2(temp_filenames['custom_geoblock_3xui'], 'custom-geoblock-for-3X-UI.txt')
             if create_srs:
                 shutil.copy2(temp_filenames['custom_geoblock_srs'], 'custom-geoblock.srs')
         print("Замена завершена.")
