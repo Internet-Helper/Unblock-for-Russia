@@ -80,6 +80,7 @@ bestbuy.com
 bing.com
 bingapis.com
 bitdefender.com
+bitnami.com
 blackfriday.com
 blinkshot.io
 blizzardwatch.com
@@ -200,6 +201,7 @@ fanatical.com
 fast.com
 fastflux.ai
 fastspring.com
+files.manus.cdn
 findagrave.com
 flexpool.io
 flir.com
@@ -346,6 +348,7 @@ macpaw.com
 macvendors.com
 malwarebytes.com
 malwarebytes.org
+manus.im
 matrix.org
 mattermost.com
 maximintegrated.com
@@ -429,7 +432,6 @@ notion.so
 notionup.com
 notionusercontent.com
 ntp.msn.com
-nvidia.com
 nxp.com
 oaistatic.com
 oaiusercontent.com
