@@ -1,4 +1,4 @@
-Нравится проект? Поддержи автора через [CloudTips](https://pay.cloudtips.ru/p/ddeac224) или [Юмани](https://yoomoney.ru/to/41001945296522) на чашечку кофе ☕ 
+Нравится проект? Поддержи автора через [CloudTips](https://pay.cloudtips.ru/p/8ec8a87c) или [Юмани](https://yoomoney.ru/to/41001945296522) на чашечку кофе ☕ 
 
 ***
 
