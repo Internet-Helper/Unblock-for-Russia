@@ -26,7 +26,6 @@ alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
 amazonaws.com
 anthropic.com
-api.themoviedb.org
 api.twitter.com
 api.x.com
 apis.google.com
@@ -64,7 +63,6 @@ grok.x.com
 habr.com
 habrastorage.org
 hellonotion.com
-image.tmdb.org
 intercom.io
 intercomassets.com
 intercomcdn.com
