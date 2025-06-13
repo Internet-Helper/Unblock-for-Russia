@@ -53,6 +53,7 @@ amplitude.com
 analog.com
 angryemailtranslator.com
 annimon.com
+ansys.com
 anthropic.com
 anythingllm.com
 api.github.com
@@ -95,7 +96,10 @@ bluesky-soft.com
 blur.io
 boosteroid.com
 bosch-home.com
+bosch.com
 bosch.de
+boschaftermarket.com
+boschautoparts.com
 bradyid.com
 brave.com
 brawlstarsgame.com
@@ -140,7 +144,6 @@ claudeusercontent.com
 clevelandclinic.org
 clickup.com
 clip.opus.pro
-cloudfront.net
 cmems-du.eu
 cocalc.com
 codebrowser.dev
@@ -223,6 +226,7 @@ flourish.studio
 fls.guru
 fluke.com
 flukenetworks.com
+flyertalk.com
 footballapi.pulselive.com
 force-user-content.com
 force.com
@@ -239,6 +243,7 @@ freemyip.com
 ftcdn.net
 fujitsu.com
 futurelearn.com
+fxnetworks.com
 g2a.com
 g711.org
 gambody.com
@@ -261,6 +266,7 @@ githubcopilot.com
 githubusercontent.com
 gitlab.com
 global.fncstatic.com
+global.platform.seconddinnertech.com
 glpals.com
 gofundme.com
 google.dev
@@ -311,6 +317,7 @@ indeed.com
 infineon.com
 informit.com
 insanelymac.com
+insideevs.com
 install.launcher.omniverse.nvidia.com
 intel.ac
 intel.ae
@@ -471,6 +478,7 @@ itninja.com
 jabra.com
 jamf.com
 jb.gg
+jetbrains.ai
 jetbrains.com
 jetbrains.com.cn
 jetbrains.dev
@@ -521,9 +529,11 @@ lowes.com
 m3u.in
 macpaw.com
 macvendors.com
+mailinator.com
 malwarebytes.com
 malwarebytes.org
 manus.im
+marvelsnap.com
 matrix.org
 mattermost.com
 max.com
@@ -706,6 +716,7 @@ salesforceiq.com
 salesforceliveagent.com
 samsclub.com
 sap.com
+sbom.sh
 scdn.co
 schaeffler.com
 schenker-tech.de
@@ -791,6 +802,7 @@ talosintelligence.com
 target.com
 te.com
 teamviewer.com
+techbargains.com
 telemetr.io
 templatemonster.com
 tempmail.plus
@@ -821,6 +833,7 @@ truthsocial.com
 tsmc.com
 ttwstatic.com
 tutanota.com
+tvn24.pl
 typekit.com
 typekit.net
 typing.com
@@ -856,6 +869,7 @@ watchguard.com
 watermarkremover.io
 wbagora.com
 wbgames.com
+wdfiles.com
 we.tl
 weather.com
 web.archive.org
