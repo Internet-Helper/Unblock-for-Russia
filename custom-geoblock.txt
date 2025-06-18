@@ -63,6 +63,10 @@ consent.trustarc.com
 copilot.microsoft.com
 crashlytics.com
 datalore.io
+deepl.app
+deepl.com
+deepl.de
+deepl.net
 dell.com
 dellcdn.com
 developer.nvidia.com
