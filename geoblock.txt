@@ -58,7 +58,9 @@ annimon.com
 ansys.com
 anthropic.com
 anythingllm.com
+api.fitbit.com
 api.github.com
+api.imgur.com
 api.jetbrains.ai
 api.themoviedb.org
 api.vk.com
@@ -203,8 +205,11 @@ docs.liquibase.com
 download3.omnissa.com
 ducati.com
 dyson.com
+dyson.de
+dyson.fr
 dyson.nl
 dyson.se
+dzcdn.net
 e-hentai.org
 easyjet.com
 ecosia.org
@@ -227,6 +232,9 @@ fastspring.com
 filebin.net
 files.manus.cdn
 findagrave.com
+fitbit-pa.googleapis.com
+fitbit.google.com
+fitbitvestibuleshim-pa.googleapis.com
 flexpool.io
 flir.com
 flir.eu

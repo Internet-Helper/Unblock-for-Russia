@@ -123,8 +123,8 @@ webchannel-alkalimakersuite-pa.clients6.google.com
 # Fitbit
 api.fitbit.com
 fitbit-pa.googleapis.com
-fitbitvestibuleshim-pa.googleapis.com
 fitbit.google.com
+fitbitvestibuleshim-pa.googleapis.com
 
 # Grok
 grok.com
@@ -427,7 +427,7 @@ deezer.com
 dzcdn.net
 
 # Остальное
-guilded.gg
+api.imgur.com
 api.workos.com
 brave.com
 builds.parsec.app
@@ -435,7 +435,11 @@ codeium.com
 consent.trustarc.com
 dell.com
 dellcdn.com
+dyson.com
+dyson.de
+dyson.fr
 ecosia.org
+guilded.gg
 meta.ai
 padi.com
 preview.reve.art
@@ -445,12 +449,8 @@ tableau.com
 tailscale.com
 teamviewer.com
 ti.com
+tria.ge
 truthsocial.com
 wbagora.com
 wbgames.com
 weather.com
-tria.ge
-api.imgur.com
-dyson.com
-dyson.fr
-dyson.de
