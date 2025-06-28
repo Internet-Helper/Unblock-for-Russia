@@ -120,6 +120,12 @@ suggestqueries.google.com
 waa-pa.clients6.google.com
 webchannel-alkalimakersuite-pa.clients6.google.com
 
+# Fitbit
+api.fitbit.com
+fitbit-pa.googleapis.com
+fitbitvestibuleshim-pa.googleapis.com
+fitbit.google.com
+
 # Grok
 grok.com
 grok.x.com
@@ -416,7 +422,12 @@ kaleido.ai
 remove.bg
 unscreen.com
 
+# Deezer
+deezer.com
+dzcdn.net
+
 # Остальное
+guilded.gg
 api.workos.com
 brave.com
 builds.parsec.app
@@ -438,3 +449,8 @@ truthsocial.com
 wbagora.com
 wbgames.com
 weather.com
+tria.ge
+api.imgur.com
+dyson.com
+dyson.fr
+dyson.de
