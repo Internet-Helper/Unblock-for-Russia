@@ -1,6 +1,10 @@
 # Все сайты, которые не работают или ограничивают функционал для европейских IP (надо открывать через США, Японию или подобные страны)
 aisandbox-pa.googleapis.com
 aitestkitchen.withgoogle.com
+apis.google.com
+aistudio.google.com
+gemini.google.com
+bard.google.com
 labs.google
 meta.ai
 
@@ -8,10 +12,12 @@ meta.ai
 4pda.to
 habr.com
 habrastorage.org
+api.vk.com
 
 # Зарубежные сайты, которые ограничивают функционал для российских IP
 developer.nvidia.com
 web.archive.org
+usher.ttvnw.net
 
 # Adobe
 adobe-identity.com
@@ -94,14 +100,10 @@ githubusercontent.com
 
 # Google AI
 ai.google.dev
-aistudio.google.com
 alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
-apis.google.com
 assistant-s3-pa.googleapis.com
-bard.google.com
 developerprofiles-pa.googleapis.com
-gemini.google.com
 generativelanguage.googleapis.com
 jules.google
 jules.google.com
@@ -407,6 +409,12 @@ deepl.app
 deepl.com
 deepl.de
 deepl.net
+
+# Kaleido
+kaleido.ai
+remove.bg
+unscreen.com
+designify.com
 
 # Остальное
 api.workos.com
