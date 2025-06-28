@@ -1,5 +1,6 @@
 2407.pl
 4pda.to
+4pda.ws
 6pm.com
 8chan.moe
 a-msedge.net
@@ -51,6 +52,7 @@ amazonaws.com
 amd.com
 amplitude.com
 analog.com
+andrevi.ch
 angryemailtranslator.com
 annimon.com
 ansys.com
@@ -59,6 +61,7 @@ anythingllm.com
 api.github.com
 api.jetbrains.ai
 api.themoviedb.org
+api.vk.com
 api.workos.com
 apiary.io
 apis.google.com
@@ -221,6 +224,7 @@ fanatical.com
 fast.com
 fastflux.ai
 fastspring.com
+filebin.net
 files.manus.cdn
 findagrave.com
 flexpool.io
@@ -278,6 +282,7 @@ gov.ua
 gpsonextra.net
 gpt3-openai.com
 gpu-monkey.com
+gql.twitch.tv
 grafana.com
 grammarly.com
 graylog.org
@@ -292,6 +297,7 @@ habr.com
 habrastorage.org
 hashicorp.com
 hashkey.com
+haydaygame.com
 hbomax.com
 healthline.com
 hellonotion.com
@@ -300,6 +306,7 @@ hex-rays.com
 hollisterco.com
 home-connect.cn
 home-connect.com
+home.by.me
 hostinger.com
 hotels.com
 hpe.com
@@ -496,6 +503,7 @@ joyreactor.cc
 jsfiddle.net
 jules.google
 jules.google.com
+kaleido.ai
 keepgrowing.in
 keepsolid.com
 kemono.su
@@ -644,6 +652,7 @@ onshape.com
 openai.com
 openai.fund
 openai.org
+openculture.com
 oracle.com
 oraclecloud.com
 ottg.app
@@ -656,6 +665,8 @@ parts-express.com
 pcbway.com
 pcgamesn.com
 pcmag.com
+penguin.com
+penguinrandomhouse.com
 people-pa.clients6.google.com
 perforce.com
 peter-tanner.com
@@ -846,8 +857,10 @@ ubi.com
 ubnt.com
 ultimaker.com
 ultraedit.com
+undress.cc
 unscreen.com
 upwork.com
+usher.ttvnw.net
 vagrantcloud.com
 vaio.com
 vans.com
@@ -923,6 +936,7 @@ xtracloud.net
 yeggi.com
 yithemes.com
 yourdictionary.com
+youtrack.cloud
 zapier.com
 zedge.net
 zendesk.com

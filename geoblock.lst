@@ -1,16 +1,22 @@
 # Все сайты, которые не работают или ограничивают функционал для европейских IP (надо открывать через США, Японию или подобные страны)
 aisandbox-pa.googleapis.com
+aistudio.google.com
 aitestkitchen.withgoogle.com
+apis.google.com
+bard.google.com
+gemini.google.com
 labs.google
 meta.ai
 
 # Российские сайты, которые ограничивают функционал для российских IP
 4pda.to
+api.vk.com
 habr.com
 habrastorage.org
 
 # Зарубежные сайты, которые ограничивают функционал для российских IP
 developer.nvidia.com
+usher.ttvnw.net
 web.archive.org
 
 # Adobe
@@ -94,14 +100,10 @@ githubusercontent.com
 
 # Google AI
 ai.google.dev
-aistudio.google.com
 alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
-apis.google.com
 assistant-s3-pa.googleapis.com
-bard.google.com
 developerprofiles-pa.googleapis.com
-gemini.google.com
 generativelanguage.googleapis.com
 jules.google
 jules.google.com
@@ -408,8 +410,16 @@ deepl.com
 deepl.de
 deepl.net
 
+# Kaleido
+designify.com
+kaleido.ai
+remove.bg
+unscreen.com
+
+# Остальное
 # Остальное
 2407.pl
+4pda.ws
 6pm.com
 8chan.moe
 abercrombie.com
@@ -432,6 +442,7 @@ amazon.com
 amd.com
 amplitude.com
 analog.com
+andrevi.ch
 angryemailtranslator.com
 annimon.com
 ansys.com
@@ -574,6 +585,7 @@ familysearch.org
 fanatical.com
 fastflux.ai
 fastspring.com
+filebin.net
 files.manus.cdn
 findagrave.com
 flexpool.io
@@ -624,6 +636,7 @@ google.dev
 gov.ua
 gpsonextra.net
 gpu-monkey.com
+gql.twitch.tv
 grafana.com
 grammarly.com
 graylog.org
@@ -634,6 +647,7 @@ grouponcdn.com
 guilded.gg
 hashicorp.com
 hashkey.com
+haydaygame.com
 hbomax.com
 healthline.com
 hellonotion.com
@@ -642,6 +656,7 @@ hex-rays.com
 hollisterco.com
 home-connect.cn
 home-connect.com
+home.by.me
 hostinger.com
 hotels.com
 hpe.com
@@ -791,6 +806,7 @@ omnissa.com
 omv-extras.org
 onfastspring.com
 onshape.com
+openculture.com
 oracle.com
 oraclecloud.com
 ottg.app
@@ -803,6 +819,8 @@ parts-express.com
 pcbway.com
 pcgamesn.com
 pcmag.com
+penguin.com
+penguinrandomhouse.com
 perforce.com
 peter-tanner.com
 pexels.com
@@ -970,8 +988,10 @@ ubi.com
 ubnt.com
 ultimaker.com
 ultraedit.com
+undress.cc
 unscreen.com
 upwork.com
+usher.ttvnw.net
 vagrantcloud.com
 vaio.com
 vans.com
@@ -1023,6 +1043,7 @@ xtracloud.net
 yeggi.com
 yithemes.com
 yourdictionary.com
+youtrack.cloud
 zapier.com
 zedge.net
 zendesk.com

@@ -1,23 +1,23 @@
 # Все сайты, которые не работают или ограничивают функционал для европейских IP (надо открывать через США, Японию или подобные страны)
 aisandbox-pa.googleapis.com
+aistudio.google.com
 aitestkitchen.withgoogle.com
 apis.google.com
-aistudio.google.com
-gemini.google.com
 bard.google.com
+gemini.google.com
 labs.google
 meta.ai
 
 # Российские сайты, которые ограничивают функционал для российских IP
 4pda.to
+api.vk.com
 habr.com
 habrastorage.org
-api.vk.com
 
 # Зарубежные сайты, которые ограничивают функционал для российских IP
 developer.nvidia.com
-web.archive.org
 usher.ttvnw.net
+web.archive.org
 
 # Adobe
 adobe-identity.com
@@ -411,10 +411,10 @@ deepl.de
 deepl.net
 
 # Kaleido
+designify.com
 kaleido.ai
 remove.bg
 unscreen.com
-designify.com
 
 # Остальное
 api.workos.com

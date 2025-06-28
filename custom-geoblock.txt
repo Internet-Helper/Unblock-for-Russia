@@ -30,6 +30,7 @@ alkalimakersuite-pa.clients6.google.com
 amazonaws.com
 anthropic.com
 api.github.com
+api.vk.com
 api.workos.com
 apis.google.com
 appcenter.ms
@@ -69,6 +70,7 @@ deepl.de
 deepl.net
 dell.com
 dellcdn.com
+designify.com
 developer.nvidia.com
 developerprofiles-pa.googleapis.com
 ecosia.org
@@ -249,6 +251,7 @@ jetbrains.space
 jetbrains.team
 jules.google
 jules.google.com
+kaleido.ai
 kotl.in
 kotlinconf.com
 kotlinlang.org
@@ -309,6 +312,7 @@ preview.reve.art
 proactivebackend-pa.googleapis.com
 pscdn.co
 qualtrics.com
+remove.bg
 res.cloudinary.com
 scdn.co
 sentry-cdn.com
@@ -346,6 +350,8 @@ tmdb.org
 truthsocial.com
 typekit.com
 typekit.net
+unscreen.com
+usher.ttvnw.net
 waa-pa.clients6.google.com
 wbagora.com
 wbgames.com
