@@ -16,8 +16,13 @@ habrastorage.org
 
 # Зарубежные сайты, которые ограничивают функционал для российских IP
 developer.nvidia.com
-usher.ttvnw.net
 web.archive.org
+
+# Twitch (для видео в 1440, но если хотите чтобы само видео не шло через Proxy/VPN, хватит только одного домена - usher.ttvnw.net, но будет доступно максимум 1080)
+passport.twitch.tv
+usher.ttvnw.net
+hls.ttvnw.net
+gql.twitch.tv
 
 # Adobe
 adobe-identity.com
