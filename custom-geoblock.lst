@@ -10,6 +10,8 @@ meta.ai
 
 # Российские сайты, которые ограничивают функционал для российских IP
 4pda.to
+4pda.ru
+4pda.ws
 api.vk.com
 habr.com
 habrastorage.org
@@ -18,10 +20,10 @@ habrastorage.org
 developer.nvidia.com
 web.archive.org
 
-# Twitch (для видео в 1440, но если хотите чтобы само видео не шло через Proxy/VPN, хватит только одного домена - usher.ttvnw.net, но будет доступно максимум 1080)
-gql.twitch.tv
-hls.ttvnw.net
-passport.twitch.tv
+# Twitch (для видео в 1080, но если хотите 1440, то нужно пустить видео через Proxy/VPN используя и другие домены)
+#gql.twitch.tv
+#hls.ttvnw.net
+#passport.twitch.tv
 usher.ttvnw.net
 
 # Adobe
@@ -415,7 +417,7 @@ xboxservices.com
 xboxstudios.com
 xbx.lv
 
-#DeepL
+# DeepL
 deepl.app
 deepl.com
 deepl.de
@@ -445,7 +447,6 @@ dyson.de
 dyson.fr
 ecosia.org
 guilded.gg
-meta.ai
 padi.com
 preview.reve.art
 res.cloudinary.com
