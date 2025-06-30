@@ -34,7 +34,6 @@ anthropic.com
 api.fitbit.com
 api.github.com
 api.imgur.com
-api.vk.com
 api.workos.com
 apis.google.com
 appcenter.ms

@@ -64,7 +64,6 @@ api.github.com
 api.imgur.com
 api.jetbrains.ai
 api.themoviedb.org
-api.vk.com
 api.workos.com
 apiary.io
 apis.google.com

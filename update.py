@@ -29,7 +29,7 @@ except NameError:
     custom_geoblock_urls = None
 
 # Домены для исключения
-domains_for_delete = {'google.com', 'googleapis.com', 'github.com', 'twimg.com', 'twitter.com', 'x.com', 'tweetdeck.com', 't.co', 'nvidia.com'}
+domains_for_delete = {'google.com', 'googleapis.com', 'github.com', 'twimg.com', 'twitter.com', 'x.com', 'tweetdeck.com', 't.co', 'nvidia.com', 'api.vk.com'}
 
 # Константы
 GEOBLOCK_LST = 'geoblock.lst'
