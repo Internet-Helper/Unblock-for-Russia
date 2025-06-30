@@ -20,7 +20,7 @@ habrastorage.org
 developer.nvidia.com
 web.archive.org
 
-# Twitch (для видео в 1080, но если хотите 1440, то нужно пустить видео через Proxy/VPN используя и другие домены)
+# Twitch (для видео в 1080, но если хотите 1440, то нужно пустить видео через Proxy/VPN используя и другие три домена убрав #)
 #gql.twitch.tv
 #hls.ttvnw.net
 #passport.twitch.tv
