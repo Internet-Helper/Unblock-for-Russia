@@ -86,6 +86,65 @@ def parse_content_with_comments(lines):
     
     return blocks
 
+def normalize_comment(comment):
+    """Нормализует комментарий для сравнения"""
+    return comment.strip().lower().replace('#', '').strip()
+
+def should_include_comment_block(comment_block, seen_comment_blocks):
+    """
+    Определяет, следует ли включить блок комментариев.
+    Возвращает True, если:
+    1. Этот точный набор комментариев еще не встречался
+    2. Или если блок содержит только один комментарий и он контекстуально важен
+    """
+    # Нормализуем комментарии для сравнения
+    normalized_comments = tuple(normalize_comment(comment) for comment in comment_block)
+    
+    # Если точно такой же блок комментариев уже был - пропускаем
+    if normalized_comments in seen_comment_blocks:
+        return False
+    
+    # Добавляем в список уже виденных
+    seen_comment_blocks.add(normalized_comments)
+    
+    # Если блок содержит только один комментарий, проверяем его важность
+    if len(comment_block) == 1:
+        comment = normalize_comment(comment_block[0])
+        # Список ключевых слов, указывающих на контекстуальную важность
+        contextual_keywords = [
+            'остальное', 'прочее', 'другие', 'дополнительно', 'также',
+            'основное', 'главное', 'важное', 'блокировка', 'разблокировка',
+            'социальные', 'новости', 'медиа', 'сервисы', 'платформы',
+            'мессенджеры', 'почта', 'облако', 'видео', 'музыка'
+        ]
+        
+        # Если комментарий содержит контекстуально важные слова, всегда включаем
+        for keyword in contextual_keywords:
+            if keyword in comment:
+                return True
+    
+    return True
+
+def merge_comment_blocks(block1_comments, block2_comments):
+    """Объединяет два блока комментариев без дублирования"""
+    if not block1_comments:
+        return block2_comments
+    if not block2_comments:
+        return block1_comments
+    
+    # Нормализуем комментарии для сравнения
+    normalized_block1 = [normalize_comment(comment) for comment in block1_comments]
+    normalized_block2 = [normalize_comment(comment) for comment in block2_comments]
+    
+    merged_comments = block1_comments[:]
+    
+    for i, comment in enumerate(block2_comments):
+        normalized_comment = normalized_block2[i]
+        if normalized_comment not in normalized_block1:
+            merged_comments.append(comment)
+    
+    return merged_comments
+
 def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_custom=False):
     print(f"Запуск работы с {filename}...\n")
 
@@ -140,15 +199,14 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
 
     result_lines = []
     final_domains = set()
-    seen_comments = set()  # Для фильтрации дублирующихся комментариев
+    seen_comment_blocks = set()  # Для отслеживания уже виденных блоков комментариев
 
     # Обрабатываем custom_blocks (все, кроме последнего)
     if not is_custom and custom_blocks:
         for block in custom_blocks[:-1]:
-            # Добавляем уникальные комментарии
-            unique_comments = [comment for comment in block['comments'] if comment not in seen_comments]
-            seen_comments.update(unique_comments)
-            result_lines.extend(unique_comments)
+            # Проверяем, следует ли включить комментарии
+            if block['comments'] and should_include_comment_block(block['comments'], seen_comment_blocks):
+                result_lines.extend(block['comments'])
             # Добавляем домены
             sorted_domains = sorted(list(block['domains']))
             result_lines.extend(sorted_domains)
@@ -159,10 +217,9 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
         if custom_blocks:
             last_custom_block = custom_blocks[-1]
             if main_blocks:
-                # Добавляем уникальные комментарии из последнего блока custom
-                unique_comments = [comment for comment in last_custom_block['comments'] if comment not in seen_comments]
-                seen_comments.update(unique_comments)
-                main_blocks[-1]['comments'] = unique_comments + main_blocks[-1]['comments']
+                # Объединяем комментарии без дублирования
+                combined_comments = merge_comment_blocks(last_custom_block['comments'], main_blocks[-1]['comments'])
+                main_blocks[-1]['comments'] = combined_comments
                 main_blocks[-1]['domains'].update(last_custom_block['domains'])
             else:
                 main_blocks.append(last_custom_block)
@@ -171,10 +228,9 @@ def process_geoblock_file(filename, urls, temp_filenames, custom_urls=None, is_c
     blocks_to_add = main_blocks if is_custom or not custom_blocks else main_blocks[-1:]
     
     for i, block in enumerate(blocks_to_add):
-        # Добавляем уникальные комментарии
-        unique_comments = [comment for comment in block['comments'] if comment not in seen_comments]
-        seen_comments.update(unique_comments)
-        result_lines.extend(unique_comments)
+        # Проверяем, следует ли включить комментарии
+        if block['comments'] and should_include_comment_block(block['comments'], seen_comment_blocks):
+            result_lines.extend(block['comments'])
         # Добавляем домены
         sorted_domains = sorted(list(block['domains']))
         result_lines.extend(sorted_domains)

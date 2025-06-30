@@ -9,8 +9,8 @@ labs.google
 meta.ai
 
 # Российские сайты, которые ограничивают функционал для российских IP
-4pda.to
 4pda.ru
+4pda.to
 4pda.ws
 api.vk.com
 habr.com
@@ -434,41 +434,41 @@ deezer.com
 dzcdn.net
 
 # Dyson
-dyson.com
-dyson.ca
-dyson.us
-dyson.co.uk
-dyson.de
-dyson.fr
-dyson.es
-dyson.it
-dyson.nl
-dyson.be
-dyson.se
-dyson.no
-dyson.fi
-dyson.pl
-dyson.ch
-dyson.at
-dyson.pt
-dyson.cz
-dyson.gr
-dyson.ie
-dyson.com.au
-dyson.co.nz
-dyson.com.sg
-dyson.hk
-dyson.tw
-dyson.co.kr
-dyson.jp
-dyson.cn
-dyson.in
-dyson.mx
-dyson.com.br
-dyson.com.ar
-dyson.co.za
 dyson.ae
+dyson.at
+dyson.be
+dyson.ca
+dyson.ch
+dyson.cn
+dyson.co.kr
+dyson.co.nz
+dyson.co.uk
+dyson.co.za
+dyson.com
+dyson.com.ar
+dyson.com.au
+dyson.com.br
+dyson.com.sg
+dyson.cz
+dyson.de
+dyson.es
+dyson.fi
+dyson.fr
+dyson.gr
+dyson.hk
+dyson.ie
+dyson.in
+dyson.it
+dyson.jp
+dyson.mx
+dyson.nl
+dyson.no
+dyson.pl
+dyson.pt
 dyson.sa
+dyson.se
+dyson.tw
+dyson.us
 
 # Остальное
 api.imgur.com
