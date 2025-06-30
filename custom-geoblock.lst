@@ -19,10 +19,10 @@ developer.nvidia.com
 web.archive.org
 
 # Twitch (для видео в 1440, но если хотите чтобы само видео не шло через Proxy/VPN, хватит только одного домена - usher.ttvnw.net, но будет доступно максимум 1080)
+gql.twitch.tv
+hls.ttvnw.net
 passport.twitch.tv
 usher.ttvnw.net
-hls.ttvnw.net
-gql.twitch.tv
 
 # Adobe
 adobe-identity.com

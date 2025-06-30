@@ -311,6 +311,7 @@ healthline.com
 hellonotion.com
 herokucdn.com
 hex-rays.com
+hls.ttvnw.net
 hollisterco.com
 home-connect.cn
 home-connect.com
@@ -670,6 +671,7 @@ pandasecurity.com
 paraswap.io
 parsec.app
 parts-express.com
+passport.twitch.tv
 pcbway.com
 pcgamesn.com
 pcmag.com

@@ -94,12 +94,14 @@ getsentry.net
 githubcopilot.com
 githubusercontent.com
 gpt3-openai.com
+gql.twitch.tv
 grok.com
 grok.x.com
 guilded.gg
 habr.com
 habrastorage.org
 hellonotion.com
+hls.ttvnw.net
 intel.ac
 intel.ae
 intel.af
@@ -318,6 +320,7 @@ openai.com
 openai.fund
 openai.org
 padi.com
+passport.twitch.tv
 people-pa.clients6.google.com
 preview.reve.art
 proactivebackend-pa.googleapis.com
