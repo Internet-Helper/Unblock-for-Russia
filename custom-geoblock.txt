@@ -123,7 +123,6 @@ fitbitvestibuleshim-pa.googleapis.com
 ftcdn.net
 gemini.google.com
 generativelanguage.googleapis.com
-getsentry.net
 githubcopilot.com
 githubusercontent.com
 gpt3-openai.com
@@ -359,9 +358,6 @@ qualtrics.com
 remove.bg
 res.cloudinary.com
 scdn.co
-sentry-cdn.com
-sentry.dev
-sentry.io
 signaler-pa.clients6.google.com
 sketchup.com
 sora.com

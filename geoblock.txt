@@ -137,6 +137,7 @@ chat.com
 chat.openai.com.cdn.cloudflare.net
 chatfuel.com
 chatgpt.com
+cici.com
 cisco.com
 cisecurity.org
 citrix.com
@@ -296,6 +297,7 @@ gambody.com
 game.co.uk
 gamestop.com
 gaming.amazon.com
+gateway.pinata.cloud
 geforcenow.com
 gemini.google.com
 generativelanguage.googleapis.com
@@ -304,7 +306,6 @@ geolocation.onetrust.com
 geospy.ai
 getoutline.com
 getsafeonline.org
-getsentry.net
 gfn.am
 ghidra-sre.org
 ghostrc.game.idtech.services
@@ -779,8 +780,6 @@ securitytrails.com
 seekvectorlogo.net
 semrush.com
 sendy.jp
-sentry-cdn.com
-sentry.dev
 sentry.io
 sephora.com
 serato.com
@@ -884,6 +883,7 @@ tria.ge
 trionworlds.com
 truthsocial.com
 tsmc.com
+ttvnw.net
 ttwstatic.com
 tutanota.com
 tvn24.pl
