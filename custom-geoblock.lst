@@ -320,8 +320,13 @@ ktor.io
 myjetbrains.com
 talkingkotlin.com
 
-# Copilot Microsoft
+# Copilot (Microsoft)
 copilot.microsoft.com
+
+# Copilot (GitHub)
+api.github.com
+githubcopilot.com
+githubusercontent.com
 
 # Netflix
 fast.com
