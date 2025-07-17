@@ -54,7 +54,19 @@ ftcdn.net
 typekit.com
 typekit.net
 
-# Autosesk
+# Basecamp
+37signals.com
+basecamp.com
+basecampapi.com
+
+# Make
+make.com
+
+# Naukri
+naukimg.com
+naukri.com
+
+# Autodesk
 autodesk.com
 cdn.web-platform.io
 qualtrics.com
@@ -71,7 +83,7 @@ canva-apps.com
 canva.com
 canva.dev
 
-# ChatGPT (OpenAI)
+# ChatGPT + Sora
 ai.com
 auth0.com
 chat.com
@@ -463,6 +475,19 @@ dyson.se
 dyson.tw
 dyson.us
 
+# Strava
+strava.com
+
+# Tableau
+tableau.com
+
+# Tailscale
+tailscale.com
+
+# TeamViewer
+download.teamviewer.com
+dl.teamviewer.com
+
 # Остальное
 api.imgur.com
 api.workos.com
@@ -478,9 +503,6 @@ padi.com
 preview.reve.art
 res.cloudinary.com
 sketchup.com
-tableau.com
-tailscale.com
-teamviewer.com
 ti.com
 tria.ge
 truthsocial.com
