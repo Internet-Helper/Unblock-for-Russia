@@ -56,22 +56,15 @@ ftcdn.net
 typekit.com
 typekit.net
 
-# Basecamp
-37signals.com
-basecamp.com
-basecampapi.com
-
-# Make
-make.com
-
-# Naukri
-naukimg.com
-naukri.com
-
 # Autodesk
 autodesk.com
 cdn.web-platform.io
 qualtrics.com
+
+# Basecamp
+37signals.com
+basecamp.com
+basecampapi.com
 
 # Brawl Stars, Clash Royale, Clash of Clans
 brawlstarsgame.com
@@ -109,17 +102,78 @@ intercom.io
 intercomassets.com
 intercomcdn.com
 
+# Copilot (GitHub)
+api.github.com
+githubcopilot.com
+githubusercontent.com
+
+# Copilot (Microsoft)
+copilot.microsoft.com
+
+# DeepL
+deepl.app
+deepl.com
+deepl.de
+deepl.net
+
+# Deezer
+deezer.com
+dzcdn.net
+
+# Dyson
+dyson.ae
+dyson.at
+dyson.be
+dyson.ca
+dyson.ch
+dyson.cn
+dyson.co.kr
+dyson.co.nz
+dyson.co.uk
+dyson.co.za
+dyson.com
+dyson.com.ar
+dyson.com.au
+dyson.com.br
+dyson.com.sg
+dyson.cz
+dyson.de
+dyson.es
+dyson.fi
+dyson.fr
+dyson.gr
+dyson.hk
+dyson.ie
+dyson.in
+dyson.it
+dyson.jp
+dyson.mx
+dyson.nl
+dyson.no
+dyson.pl
+dyson.pt
+dyson.sa
+dyson.se
+dyson.tw
+dyson.us
+
 # Elevenlabs
 elevenlabs.io
 elevenreader.io
 
+# Fitbit
+api.fitbit.com
+fitbit-pa.googleapis.com
+fitbit.google.com
+fitbitvestibuleshim-pa.googleapis.com
+
 # Google AI
-aistudio.google.com
 ai.google.dev
+aisandbox-pa.googleapis.com
+aistudio.google.com
+aitestkitchen.withgoogle.com
 alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
-aisandbox-pa.googleapis.com
-aitestkitchen.withgoogle.com
 apis.google.com
 assistant-s3-pa.googleapis.com
 bard.google.com
@@ -140,12 +194,6 @@ signaler-pa.clients6.google.com
 suggestqueries.google.com
 waa-pa.clients6.google.com
 webchannel-alkalimakersuite-pa.clients6.google.com
-
-# Fitbit
-api.fitbit.com
-fitbit-pa.googleapis.com
-fitbit.google.com
-fitbitvestibuleshim-pa.googleapis.com
 
 # Grok
 grok.com
@@ -320,13 +368,18 @@ ktor.io
 myjetbrains.com
 talkingkotlin.com
 
-# Copilot (Microsoft)
-copilot.microsoft.com
+# Kaleido
+designify.com
+kaleido.ai
+remove.bg
+unscreen.com
 
-# Copilot (GitHub)
-api.github.com
-githubcopilot.com
-githubusercontent.com
+# Make
+make.com
+
+# Naukri
+naukimg.com
+naukri.com
 
 # Netflix
 fast.com
@@ -387,6 +440,19 @@ spotifycodes.com
 spotifyforbrands.com
 spotifyjobs.com
 
+# Strava
+strava.com
+
+# Tableau
+tableau.com
+
+# Tailscale
+tailscale.com
+
+# TeamViewer
+dl.teamviewer.com
+download.teamviewer.com
+
 # Tidal
 onetrust.com
 squareup.com
@@ -421,72 +487,6 @@ xboxplayanywhere.com
 xboxservices.com
 xboxstudios.com
 xbx.lv
-
-# DeepL
-deepl.app
-deepl.com
-deepl.de
-deepl.net
-
-# Kaleido
-designify.com
-kaleido.ai
-remove.bg
-unscreen.com
-
-# Deezer
-deezer.com
-dzcdn.net
-
-# Dyson
-dyson.ae
-dyson.at
-dyson.be
-dyson.ca
-dyson.ch
-dyson.cn
-dyson.co.kr
-dyson.co.nz
-dyson.co.uk
-dyson.co.za
-dyson.com
-dyson.com.ar
-dyson.com.au
-dyson.com.br
-dyson.com.sg
-dyson.cz
-dyson.de
-dyson.es
-dyson.fi
-dyson.fr
-dyson.gr
-dyson.hk
-dyson.ie
-dyson.in
-dyson.it
-dyson.jp
-dyson.mx
-dyson.nl
-dyson.no
-dyson.pl
-dyson.pt
-dyson.sa
-dyson.se
-dyson.tw
-dyson.us
-
-# Strava
-strava.com
-
-# Tableau
-tableau.com
-
-# Tailscale
-tailscale.com
-
-# TeamViewer
-download.teamviewer.com
-dl.teamviewer.com
 
 # Zapier
 zapier-deployment.com
