@@ -2,11 +2,13 @@
 aisandbox-pa.googleapis.com
 aistudio.google.com
 aitestkitchen.withgoogle.com
+alkalimakersuite-pa.clients6.google.com
 apis.google.com
 bard.google.com
 gemini.google.com
 labs.google
 meta.ai
+webchannel-alkalimakersuite-pa.clients6.google.com
 
 # Российские сайты, которые ограничивают функционал для российских IP
 4pda.ru
@@ -111,15 +113,9 @@ intercomcdn.com
 elevenlabs.io
 elevenreader.io
 
-# GitHub (Copilot)
-api.github.com
-githubcopilot.com
-githubusercontent.com
-
 # Google AI
 ai.google.dev
 alkalicore-pa.clients6.google.com
-alkalimakersuite-pa.clients6.google.com
 assistant-s3-pa.googleapis.com
 developerprofiles-pa.googleapis.com
 generativelanguage.googleapis.com
@@ -136,7 +132,6 @@ proactivebackend-pa.googleapis.com
 signaler-pa.clients6.google.com
 suggestqueries.google.com
 waa-pa.clients6.google.com
-webchannel-alkalimakersuite-pa.clients6.google.com
 
 # Fitbit
 api.fitbit.com
@@ -317,16 +312,8 @@ ktor.io
 myjetbrains.com
 talkingkotlin.com
 
-# Microsoft
-a-msedge.net
-appcenter.ms
-azureedge.net
-bing.com
-bingapis.com
+# Copilot Microsoft
 copilot.microsoft.com
-microsoft.com
-microsoftapp.net
-windowsupdate.com
 
 # Netflix
 fast.com
@@ -487,6 +474,10 @@ tailscale.com
 # TeamViewer
 download.teamviewer.com
 dl.teamviewer.com
+
+# Zapier
+zapier-deployment.com
+zapier.com
 
 # Остальное
 api.imgur.com
