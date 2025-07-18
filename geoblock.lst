@@ -66,6 +66,9 @@ qualtrics.com
 basecamp.com
 basecampapi.com
 
+# Brave
+brave.com
+
 # Brawl Stars, Clash Royale, Clash of Clans
 brawlstarsgame.com
 clashofclans.com
@@ -102,14 +105,6 @@ intercom.io
 intercomassets.com
 intercomcdn.com
 
-# Copilot (GitHub)
-api.github.com
-githubcopilot.com
-githubusercontent.com
-
-# Copilot (Microsoft)
-copilot.microsoft.com
-
 # DeepL
 deepl.app
 deepl.com
@@ -119,6 +114,14 @@ deepl.net
 # Deezer
 deezer.com
 dzcdn.net
+
+# Dell
+dell.com
+dellcdn.com
+
+# Designer + Copilot (Microsoft)
+copilot.microsoft.com
+designer.microsoft.com
 
 # Dyson
 dyson.ae
@@ -138,6 +141,7 @@ dyson.com.br
 dyson.com.sg
 dyson.cz
 dyson.de
+dyson.dk
 dyson.es
 dyson.fi
 dyson.fr
@@ -157,7 +161,7 @@ dyson.se
 dyson.tw
 dyson.us
 
-# Elevenlabs
+# ElevenLabs + ElevenReader
 elevenlabs.io
 elevenreader.io
 
@@ -199,6 +203,12 @@ webchannel-alkalimakersuite-pa.clients6.google.com
 grok.com
 grok.x.com
 x.ai
+
+# Guilded
+guilded.gg
+
+# Imgur
+api.imgur.com
 
 # Intel
 intel.ac
@@ -348,25 +358,7 @@ intel.wf
 intel.yt
 
 # Jetbrains
-datalore.io
-intellij.com
-intellij.net
-intellij.org
-jb.gg
 jetbrains.com
-jetbrains.com.cn
-jetbrains.dev
-jetbrains.net
-jetbrains.org
-jetbrains.ru
-jetbrains.space
-jetbrains.team
-kotl.in
-kotlinconf.com
-kotlinlang.org
-ktor.io
-myjetbrains.com
-talkingkotlin.com
 
 # Kaleido
 designify.com
@@ -376,6 +368,9 @@ unscreen.com
 
 # Make
 make.com
+
+# Manus
+api.manus.im
 
 # Naukri
 naukimg.com
@@ -424,6 +419,15 @@ splunkcloud.com
 zendesk.com
 zendesk.de
 
+# Parsec
+builds.parsec.app
+
+# Reve
+preview.reve.art
+
+# SketchUp
+sketchup.com
+
 # Spotify
 akamaized.net
 byspotify.com
@@ -465,28 +469,33 @@ tmdb-image-prod.b-cdn.net
 tmdb.com
 tmdb.org
 
+# Truth Social
+truthsocial.com
+
+# WB Games
+wbagora.com
+wbgames.com
+
+# Weather.com
+weather.com
+
+# Web Archive
+web.archive.org
+
+# Windsurf
+codeium.com
+windsurf.com
+
+# WorkOS
+api.workos.com
+
 # Xbox
-live.net
-xbox.co
-xbox.com
-xbox.eu
-xbox.org
-xbox360.co
-xbox360.com
-xbox360.eu
-xbox360.org
-xboxab.com
-xboxgamepass.com
-xboxgamestudios.com
-xboxlive.cn
-xboxlive.com
-xboxone.co
-xboxone.com
-xboxone.eu
-xboxplayanywhere.com
-xboxservices.com
-xboxstudios.com
-xbx.lv
+auth.xboxlive.com
+edgeservices.bing.com
+gssv-play-prod.xboxlive.com
+rewards.bing.com
+sydney.bing.com
+xboxdesignlab.xbox.com
 
 # Zapier
 zapier-deployment.com
@@ -520,8 +529,6 @@ angryemailtranslator.com
 annimon.com
 ansys.com
 anythingllm.com
-api.imgur.com
-api.workos.com
 apiary.io
 aplawrence.com
 apple.com
@@ -552,7 +559,6 @@ bosch.de
 boschaftermarket.com
 boschautoparts.com
 bradyid.com
-brave.com
 bricklink.com
 broadcom.com
 broccolionline.jp
@@ -560,7 +566,6 @@ broncosportforum.com
 btod.com
 buanzo.org
 buf.build
-builds.parsec.app
 buymeacoffee.com
 by.me
 cambiumnetworks.com
@@ -588,7 +593,6 @@ cmems-du.eu
 co.nz
 cocalc.com
 codebrowser.dev
-codeium.com
 cohere.com
 coingate.com
 com.ua
@@ -610,8 +614,6 @@ dating.com
 daz3d.com
 deepsource.com
 deepsource.io
-dell.com
-dellcdn.com
 devart.com
 devexpress.com
 devops.com
@@ -678,6 +680,8 @@ getoutline.com
 getsafeonline.org
 gfn.am
 ghidra-sre.org
+githubcopilot.com
+githubusercontent.com
 gitlab.com
 glpals.com
 gofundme.com
@@ -692,7 +696,6 @@ grazie.ai
 groq.com
 groupon.com
 grouponcdn.com
-guilded.gg
 hashicorp.com
 hashkey.com
 haydaygame.com
@@ -725,6 +728,7 @@ infineon.com
 informit.com
 insanelymac.com
 insideevs.com
+intellij.net
 intellipaat.com
 intuitibits.com
 iperf3serverlist.net
@@ -732,6 +736,7 @@ itninja.com
 jabra.com
 jamf.com
 jetbrains.ai
+jetbrains.space
 joesandbox.com
 joyreactor.cc
 jsfiddle.net
@@ -803,6 +808,7 @@ msn.com
 mssg.me
 myfonts.com
 myheritage.com
+myjetbrains.com
 myprepaidcenter.com
 myrotvorets.center
 nba.com
@@ -863,7 +869,6 @@ pluralsight.com
 pny.com
 porsche.com
 premierleague.com
-preview.reve.art
 primevideo.com
 promods.net
 prowlarr.com
@@ -878,6 +883,7 @@ qualcomm.com
 quicknode.com
 radarr.video
 ratatype.com
+raycast-releases.com
 raycast.com
 razer.com
 reactflow.dev
@@ -930,7 +936,6 @@ showtime.com
 siemens.com
 singlekey-id.com
 site.com
-sketchup.com
 sky.com
 skycdp.com
 skyshowtime.com
@@ -986,7 +991,6 @@ trailblazer.me
 trailhead.com
 tria.ge
 trionworlds.com
-truthsocial.com
 tsmc.com
 ttvnw.net
 ttwstatic.com
@@ -1022,11 +1026,8 @@ walletconnect.com
 walmart.com
 watchguard.com
 watermarkremover.io
-wbagora.com
-wbgames.com
 wdfiles.com
 we.tl
-weather.com
 web-platform.io
 webex.com
 webnames.ca
@@ -1037,11 +1038,12 @@ wetransfer.com
 widgetapp.stream
 wikidot.com
 windguru.cz
-windsurf.com
 wk.cz
 wonderclub.com
 wpengine.com
 wunderground.com
+xbox.com
+xboxlive.com
 xerox.com
 xfantazy.com
 xmg.gg
