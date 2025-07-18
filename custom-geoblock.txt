@@ -30,6 +30,7 @@ akamaized.net
 alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
 amazonaws.com
+amd.com
 anthropic.com
 api.fitbit.com
 api.imgur.com
@@ -61,6 +62,7 @@ clashofclans.com
 clashroyaleapp.com
 claude.ai
 claudeusercontent.com
+clickup.com
 codeium.com
 consent.trustarc.com
 copilot.microsoft.com
@@ -336,8 +338,10 @@ onetrust.com
 openai.com
 openai.fund
 openai.org
+oracle.com
 padi.com
 people-pa.clients6.google.com
+pixabay.com
 preview.reve.art
 proactivebackend-pa.googleapis.com
 pscdn.co
@@ -379,6 +383,7 @@ tria.ge
 truthsocial.com
 typekit.com
 typekit.net
+ultimaker.com
 unscreen.com
 usher.ttvnw.net
 waa-pa.clients6.google.com
@@ -390,6 +395,7 @@ webchannel-alkalimakersuite-pa.clients6.google.com
 windsurf.com
 x.ai
 xboxdesignlab.xbox.com
+xerox.com
 zapier-deployment.com
 zapier.com
 zendesk.com

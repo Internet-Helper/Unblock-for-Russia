@@ -108,6 +108,9 @@ intercom.io
 intercomassets.com
 intercomcdn.com
 
+# ClickUp
+clickup.com
+
 # DeepL
 deepl.app
 deepl.com
@@ -375,6 +378,9 @@ make.com
 # Manus
 api.manus.im
 
+# Meta AI
+meta.ai
+
 # Naukri
 naukimg.com
 naukri.com
@@ -422,8 +428,14 @@ splunkcloud.com
 zendesk.com
 zendesk.de
 
+# Oracle
+oracle.com
+
 # Parsec
 builds.parsec.app
+
+# Pixabay
+pixabay.com
 
 # Reve
 preview.reve.art
@@ -507,23 +519,11 @@ xerox.com
 zapier-deployment.com
 zapier.com
 
-# ClickUp
-clickup.com
-
-# Meta AI
-meta.ai
-
-# Oracle
-oracle.com
-
-# Pixabay
-pixabay.com
-
 # Остальное
 consent.trustarc.com
 ecosia.org
 padi.com
 res.cloudinary.com
-ultimaker.com
 ti.com
 tria.ge
+ultimaker.com

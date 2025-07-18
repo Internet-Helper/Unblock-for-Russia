@@ -56,6 +56,9 @@ ftcdn.net
 typekit.com
 typekit.net
 
+# AMD
+amd.com
+
 # Autodesk
 autodesk.com
 cdn.web-platform.io
@@ -104,6 +107,9 @@ claudeusercontent.com
 intercom.io
 intercomassets.com
 intercomcdn.com
+
+# ClickUp
+clickup.com
 
 # DeepL
 deepl.app
@@ -372,6 +378,9 @@ make.com
 # Manus
 api.manus.im
 
+# Meta AI
+meta.ai
+
 # Naukri
 naukimg.com
 naukri.com
@@ -419,8 +428,14 @@ splunkcloud.com
 zendesk.com
 zendesk.de
 
+# Oracle
+oracle.com
+
 # Parsec
 builds.parsec.app
+
+# Pixabay
+pixabay.com
 
 # Reve
 preview.reve.art
@@ -497,6 +512,9 @@ rewards.bing.com
 sydney.bing.com
 xboxdesignlab.xbox.com
 
+# Xerox
+xerox.com
+
 # Zapier
 zapier-deployment.com
 zapier.com
@@ -521,7 +539,6 @@ altaro.com
 alza.hu
 amazfitwatchfaces.com
 amazon.com
-amd.com
 amplitude.com
 analog.com
 andrevi.ch
@@ -587,7 +604,6 @@ citrix.com
 clamav.net
 clarabridge.net
 clevelandclinic.org
-clickup.com
 cloudflare.net
 cmems-du.eu
 co.nz
@@ -839,7 +855,6 @@ onfastspring.com
 onshape.com
 openculture.com
 opus.pro
-oracle.com
 oraclecloud.com
 ottg.app
 outflank.nl
@@ -862,7 +877,6 @@ photonengine.com
 pimeyes.com
 pinata.cloud
 pingdom.com
-pixabay.com
 plugin-alliance.com
 plugshare.com
 pluralsight.com
@@ -1044,7 +1058,6 @@ wpengine.com
 wunderground.com
 xbox.com
 xboxlive.com
-xerox.com
 xfantazy.com
 xmg.gg
 xtracloud.net
