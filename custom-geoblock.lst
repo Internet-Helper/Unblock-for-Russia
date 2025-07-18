@@ -56,6 +56,9 @@ ftcdn.net
 typekit.com
 typekit.net
 
+# AMD
+amd.com
+
 # Autodesk
 autodesk.com
 cdn.web-platform.io
@@ -497,14 +500,30 @@ rewards.bing.com
 sydney.bing.com
 xboxdesignlab.xbox.com
 
+# Xerox
+xerox.com
+
 # Zapier
 zapier-deployment.com
 zapier.com
+
+# ClickUp
+clickup.com
+
+# Meta AI
+meta.ai
+
+# Oracle
+oracle.com
+
+# Pixabay
+pixabay.com
 
 # Остальное
 consent.trustarc.com
 ecosia.org
 padi.com
 res.cloudinary.com
+ultimaker.com
 ti.com
 tria.ge
