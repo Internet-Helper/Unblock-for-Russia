@@ -136,6 +136,8 @@ chat.openai.com.cdn.cloudflare.net
 chatfuel.com
 chatgpt.com
 cici.com
+ciciai.com
+ciciaicdn.com
 cisco.com
 cisecurity.org
 citrix.com
@@ -910,6 +912,7 @@ web.archive.org
 webchannel-alkalimakersuite-pa.clients6.google.com
 webex.com
 webnames.ca
+weborama.nl
 webscraper.io
 weebly.com
 wellfound.com

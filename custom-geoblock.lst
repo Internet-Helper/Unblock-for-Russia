@@ -100,6 +100,10 @@ openai.fund
 openai.org
 sora.com
 
+# CiciAI
+ciciai.com
+ciciaicdn.com
+
 # Claude
 anthropic.com
 claude.ai
@@ -128,6 +132,9 @@ dellcdn.com
 # Designer + Copilot (Microsoft)
 copilot.microsoft.com
 designer.microsoft.com
+
+# Developer (Nvidia)
+developer.nvidia.com
 
 # Dyson
 dyson.ae
@@ -428,9 +435,6 @@ splunkcloud.com
 zendesk.com
 zendesk.de
 
-# Developer (Nvidia)
-developer.nvidia.com
-
 # Oracle
 oracle.com
 
@@ -521,10 +525,6 @@ xerox.com
 # Zapier
 zapier-deployment.com
 zapier.com
-
-# CiciAI
-ciciai.com
-ciciaicdn.com
 
 # Остальное
 consent.trustarc.com
