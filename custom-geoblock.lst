@@ -66,6 +66,9 @@ qualtrics.com
 basecamp.com
 basecampapi.com
 
+# Brave
+brave.com
+
 # Brawl Stars, Clash Royale, Clash of Clans
 brawlstarsgame.com
 clashofclans.com
@@ -102,9 +105,6 @@ intercom.io
 intercomassets.com
 intercomcdn.com
 
-# Copilot (Microsoft)
-copilot.microsoft.com
-
 # DeepL
 deepl.app
 deepl.com
@@ -114,6 +114,14 @@ deepl.net
 # Deezer
 deezer.com
 dzcdn.net
+
+# Dell
+dell.com
+dellcdn.com
+
+# Designer + Copilot (Microsoft) 
+copilot.microsoft.com
+designer.microsoft.com
 
 # Dyson
 dyson.ae
@@ -133,6 +141,7 @@ dyson.com.br
 dyson.com.sg
 dyson.cz
 dyson.de
+dyson.dk
 dyson.es
 dyson.fi
 dyson.fr
@@ -152,7 +161,7 @@ dyson.se
 dyson.tw
 dyson.us
 
-# Elevenlabs
+# ElevenLabs + ElevenReader
 elevenlabs.io
 elevenreader.io
 
@@ -194,6 +203,9 @@ webchannel-alkalimakersuite-pa.clients6.google.com
 grok.com
 grok.x.com
 x.ai
+
+# Guilded
+guilded.gg
 
 # Intel
 intel.ac
@@ -342,26 +354,11 @@ intel.vu
 intel.wf
 intel.yt
 
+# Imgur
+api.imgur.com
+
 # Jetbrains
-datalore.io
-intellij.com
-intellij.net
-intellij.org
-jb.gg
 jetbrains.com
-jetbrains.com.cn
-jetbrains.dev
-jetbrains.net
-jetbrains.org
-jetbrains.ru
-jetbrains.space
-jetbrains.team
-kotl.in
-kotlinconf.com
-kotlinlang.org
-ktor.io
-myjetbrains.com
-talkingkotlin.com
 
 # Kaleido
 designify.com
@@ -371,6 +368,9 @@ unscreen.com
 
 # Make
 make.com
+
+# Manus
+api.manus.im
 
 # Naukri
 naukimg.com
@@ -419,6 +419,12 @@ splunkcloud.com
 zendesk.com
 zendesk.de
 
+# Parsec
+builds.parsec.app
+
+# SketchUp
+sketchup.com
+
 # Spotify
 akamaized.net
 byspotify.com
@@ -438,6 +444,9 @@ spotifyjobs.com
 # Strava
 strava.com
 
+# Reve
+preview.reve.art
+
 # Tableau
 tableau.com
 
@@ -453,6 +462,9 @@ onetrust.com
 squareup.com
 tidal.com
 
+# Truth Social
+truthsocial.com
+
 # TMDB
 theaudiodb.com
 themoviedb.org
@@ -461,50 +473,38 @@ tmdb.com
 tmdb.org
 
 # Xbox
-live.net
-xbox.co
-xbox.com
-xbox.eu
-xbox.org
-xbox360.co
-xbox360.com
-xbox360.eu
-xbox360.org
-xboxab.com
-xboxgamepass.com
-xboxgamestudios.com
-xboxlive.cn
-xboxlive.com
-xboxone.co
-xboxone.com
-xboxone.eu
-xboxplayanywhere.com
-xboxservices.com
-xboxstudios.com
-xbx.lv
+sydney.bing.com
+edgeservices.bing.com
+rewards.bing.com
+auth.xboxlive.com
+xboxdesignlab.xbox.com
+gssv-play-prod.xboxlive.com
+
+# WB Games
+wbagora.com
+wbgames.com
+
+# Weather.com
+weather.com
+
+# Web Archive
+web.archive.org 
+
+# Windsurf
+windsurf.com
+codeium.com
+
+# WorkOS
+api.workos.com
 
 # Zapier
 zapier-deployment.com
 zapier.com
 
 # Остальное
-api.imgur.com
-api.workos.com
-brave.com
-builds.parsec.app
-codeium.com
 consent.trustarc.com
-dell.com
-dellcdn.com
 ecosia.org
-guilded.gg
 padi.com
-preview.reve.art
 res.cloudinary.com
-sketchup.com
 ti.com
 tria.ge
-truthsocial.com
-wbagora.com
-wbgames.com
-weather.com
