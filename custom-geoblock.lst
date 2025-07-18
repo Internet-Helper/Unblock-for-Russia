@@ -428,6 +428,9 @@ splunkcloud.com
 zendesk.com
 zendesk.de
 
+# Developer (Nvidia)
+developer.nvidia.com
+
 # Oracle
 oracle.com
 
@@ -519,6 +522,10 @@ xerox.com
 zapier-deployment.com
 zapier.com
 
+# CiciAI
+ciciai.com
+ciciaicdn.com
+
 # Остальное
 consent.trustarc.com
 ecosia.org
@@ -527,3 +534,4 @@ res.cloudinary.com
 ti.com
 tria.ge
 ultimaker.com
+weborama.nl
