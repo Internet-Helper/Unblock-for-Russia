@@ -136,8 +136,6 @@ chat.openai.com.cdn.cloudflare.net
 chatfuel.com
 chatgpt.com
 cici.com
-ciciai.com
-ciciaicdn.com
 cisco.com
 cisecurity.org
 citrix.com

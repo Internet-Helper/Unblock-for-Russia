@@ -58,8 +58,7 @@ cdn.web-platform.io
 chat.com
 chat.openai.com.cdn.cloudflare.net
 chatgpt.com
-ciciai.com
-ciciaicdn.com
+cici.com
 clashofclans.com
 clashroyaleapp.com
 claude.ai
