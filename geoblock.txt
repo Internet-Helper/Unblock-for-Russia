@@ -6,6 +6,7 @@
 6pm.com
 8chan.moe
 abercrombie.com
+accounts.spotify.com
 activestate.com
 acurapartswarehouse.com
 adafruit.com
@@ -30,6 +31,7 @@ adobesc.com
 adobess.com
 adobesunbreak.com
 adobetag.com
+aet.spotify.com
 agar.io
 ai.com
 ai.google.dev
@@ -37,7 +39,6 @@ airbrake.io
 aisandbox-pa.googleapis.com
 aistudio.google.com
 aitestkitchen.withgoogle.com
-akamaized.net
 alberta.ca
 alienwarearena.com
 alkalicore-pa.clients6.google.com
@@ -58,14 +59,18 @@ annimon.com
 ansys.com
 anthropic.com
 anythingllm.com
+ap-gew1.spotify.com
+api-partner.spotify.com
 api.fitbit.com
 api.imgur.com
 api.manus.im
+api.spotify.com
 api.workos.com
 apiary.io
 apis.google.com
 aplawrence.com
 apple.com
+appresolve.spotify.com
 arkoselabs.com
 assistant-s3-pa.googleapis.com
 astockcdn.net
@@ -115,7 +120,6 @@ buf.build
 builds.parsec.app
 buymeacoffee.com
 by.me
-byspotify.com
 cambiumnetworks.com
 canva-apps.com
 canva.com
@@ -248,6 +252,7 @@ element14.com
 elevenlabs.io
 elevenreader.io
 elgiganten.se
+encore.scdn.co
 engagor.com
 entrust.com
 epicgames.com
@@ -300,6 +305,7 @@ genspark.ai
 geospy.ai
 getoutline.com
 getsafeonline.org
+gew1-spclient.spotify.com
 gfn.am
 ghidra-sre.org
 githubcopilot.com
@@ -550,6 +556,8 @@ liquidsky.com
 live.net
 livekit.cloud
 llamameta.net
+login.app.spotify.com
+login5.spotify.com
 logo.com
 lookerstudio.google.com
 lowes.com
@@ -666,6 +674,7 @@ omv-extras.org
 onetrust.com
 onfastspring.com
 onshape.com
+open.spotify.com
 openai.com
 openai.fund
 openai.org
@@ -707,7 +716,6 @@ primevideo.com
 proactivebackend-pa.googleapis.com
 promods.net
 prowlarr.com
-pscdn.co
 ptc.com
 pulselive.com
 pump.fun
@@ -751,7 +759,6 @@ salesforceliveagent.com
 samsclub.com
 sap.com
 sbom.sh
-scdn.co
 schaeffler.com
 schenker-tech.de
 screamingfrog.co.uk
@@ -792,20 +799,12 @@ solarwinds.com
 sophos.com
 sora.com
 spacelift.io
+spclient.wg.spotify.com
 spiceworks.com
 spitfireaudio.com
 splunk.com
 splunkcloud.com
-spoti.fi
-spotify-everywhere.com
 spotify.com
-spotify.design
-spotifycdn.com
-spotifycdn.net
-spotifycharts.com
-spotifycodes.com
-spotifyforbrands.com
-spotifyjobs.com
 squadbustersgame.com
 squareup.com
 st.com
@@ -854,6 +853,7 @@ tmdb-image-prod.b-cdn.net
 tmdb.com
 tmdb.org
 tommy.com
+toolbox.app
 torrenteditor.com
 trailblazer.me
 trailhead.com
@@ -923,6 +923,7 @@ wk.cz
 wonderclub.com
 wpengine.com
 wunderground.com
+www.spotify.com
 x.ai
 xbox.com
 xboxdesignlab.xbox.com
@@ -930,6 +931,7 @@ xboxlive.com
 xerox.com
 xfantazy.com
 xmg.gg
+xpui.app.spotify.com
 xtracloud.net
 yeggi.com
 yithemes.com
